@@ -1,0 +1,55 @@
+units:
+  # Proxy Spacing Variables
+  kx: cx
+  ky: cy
+  # Padding Variables
+  px: kx + 2
+  py: ky + 2
+points:
+  zones:
+    myKB:
+      # Choc spacing
+      key:
+        padding: 1ky
+        spread: 1kx
+      columns:
+        pinky:
+          rows.thumb.skip: true
+        ring:
+          key.stagger: 5
+        middle:
+          key.stagger: 5
+        index:
+          key.stagger: -5
+        inner:
+      rows:
+        bottom:
+        home:
+        top:
+    thumbs:
+      key:
+        padding: 1ky
+        spread: 1kx
+      anchor:
+        ref: myKB_inner_bottom
+        shift: [-1kx,-1py]
+      columns:
+        myKey1:
+          key:
+            splay: -15
+        myKey2:
+          key:
+            splay: -15
+            shift: [3,-2]
+        myKey3:
+          key:
+            width: 1.5kx
+            rotate: 90
+            splay: -15
+            shift: [6,-4]
+      rows:
+outlines:
+  mOutline:
+    - what: rectangle
+      where: true
+      size: [kx-0.5, ky-0.5]
